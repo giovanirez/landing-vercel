@@ -2,6 +2,7 @@
  * Landing Page de Alta Conversão - Produto Digital Educacional
  * Design: Brutalismo Político Contemporâneo Refinado
  * Melhorias: Hierarquia visual aprimorada, animações sofisticadas, layout assimétrico, tipografia dinâmica
+ * Alteração: Tema Azul Global, com exceção da seção de Problema (Vermelho)
  */
 
 import { Button } from "@/components/ui/button";
@@ -51,8 +52,8 @@ export default function Home() {
           />
           {/* Gradient overlay com efeito de profundidade */}
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/40 via-[#1a1a1a]/70 to-[#1a1a1a]" />
-          {/* Linha decorativa diagonal */}
-          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#c41e3a]/10 to-transparent rounded-full blur-3xl" />
+          {/* Linha decorativa diagonal - AZUL */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#2563eb]/10 to-transparent rounded-full blur-3xl" />
         </div>
 
         {/* Content */}
@@ -69,7 +70,8 @@ export default function Home() {
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85]">
                 <span className="text-white">Eleições</span>
                 <br />
-                <span className="text-[#c41e3a] relative">
+                {/* AZUL */}
+                <span className="text-[#2563eb] relative">
                   no Voto.
                   <span className="absolute bottom-0 left-0 w-full h-2 bg-[#ffd700]" />
                 </span>
@@ -86,7 +88,8 @@ export default function Home() {
 
             {/* Supporting text com layout refinado */}
             <div className="max-w-2xl mx-auto pt-8 space-y-6">
-              <div className="border-l-6 border-[#c41e3a] pl-6 py-4">
+              {/* Border AZUL */}
+              <div className="border-l-6 border-[#2563eb] pl-6 py-4">
                 <p className="text-lg md:text-xl text-white/95 font-medium">
                   Este material é para quem é de direita<br />
                   e não quer ver a esquerda vencer as eleições mais uma vez.
@@ -104,11 +107,11 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CTA Button com efeito hover sofisticado */}
+            {/* CTA Button - AZUL */}
             <div className="pt-12 flex justify-center">
               <Button
                 onClick={handleCTA}
-                className="bg-[#c41e3a] hover:bg-[#a01828] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
+                className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
               >
                 {/* Background effect */}
                 <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
@@ -121,39 +124,39 @@ export default function Home() {
               </Button>
             </div>
 
-            {/* Trust badge */}
+            {/* Trust badge - Ticks AZUL */}
             <div className="pt-8 flex justify-center gap-6 text-sm text-white/60">
               <div className="flex items-center gap-2">
-                <span className="text-[#c41e3a]">✓</span>
+                <span className="text-[#2563eb]">✓</span>
                 <span>Acesso imediato</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-[#c41e3a]">✓</span>
+                <span className="text-[#2563eb]">✓</span>
                 <span>Leitura privada</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="text-[#c41e3a]">✓</span>
+                <span className="text-[#2563eb]">✓</span>
                 <span>Sem compromisso</span>
               </div>
             </div>
           </div>
         </div>
 
-        {/* Scroll indicator com animação */}
+        {/* Scroll indicator com animação - Hover AZUL */}
         <div className="absolute bottom-12 left-1/2 -translate-x-1/2 z-10 opacity-0 group-hover:opacity-100 transition-opacity duration-300">
           <div className="flex flex-col items-center gap-3">
             <div className="w-6 h-10 border-2 border-white/30 rounded-full flex items-center justify-center group">
-              <div className="w-1 h-3 bg-white/30 rounded-full group-hover:bg-[#c41e3a] transition-all animate-pulse" />
+              <div className="w-1 h-3 bg-white/30 rounded-full group-hover:bg-[#2563eb] transition-all animate-pulse" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* IDENTIFICATION & ALERT SECTION */}
+      {/* IDENTIFICATION & ALERT SECTION - Border AZUL */}
       <section 
         id="alert"
         data-section
-        className={`py-24 md:py-32 bg-[#1a1a1a] border-t-8 border-[#c41e3a] transition-all duration-1000 ${
+        className={`py-24 md:py-32 bg-[#1a1a1a] border-t-8 border-[#2563eb] transition-all duration-1000 ${
           visibleSections.has("alert") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
       >
@@ -179,7 +182,8 @@ export default function Home() {
                   "ou no dia da votação"
                 ].map((item, idx) => (
                   <div key={idx} className="flex items-center gap-4 group cursor-pointer">
-                    <div className="w-12 h-12 bg-[#c41e3a] flex items-center justify-center font-black text-white group-hover:bg-[#ffd700] group-hover:text-[#1a1a1a] transition-all">
+                    {/* Number box - AZUL */}
+                    <div className="w-12 h-12 bg-[#2563eb] flex items-center justify-center font-black text-white group-hover:bg-[#ffd700] group-hover:text-[#1a1a1a] transition-all">
                       {idx + 1}
                     </div>
                     <span className="text-xl text-white/90 group-hover:text-white transition-colors">{item}</span>
@@ -234,7 +238,8 @@ export default function Home() {
                   Historicamente, a esquerda entendeu algo fundamental:
                 </p>
 
-                <div className="bg-[#1a1a1a] border-l-8 border-[#c41e3a] p-6 md:p-8">
+                {/* Quote border - AZUL */}
+                <div className="bg-[#1a1a1a] border-l-8 border-[#2563eb] p-6 md:p-8">
                   <p className="text-xl md:text-2xl font-bold text-white leading-snug">
                     Eleições não são vencidas apenas convencendo eleitores, mas moldando o ambiente onde a decisão acontece.
                   </p>
@@ -253,7 +258,8 @@ export default function Home() {
                       "no que pode ou não ser questionado"
                     ].map((item, idx) => (
                       <div key={idx} className="flex items-start gap-4 group">
-                        <div className="w-8 h-8 bg-[#c41e3a] flex items-center justify-center flex-shrink-0 group-hover:bg-[#ffd700] transition-colors">
+                        {/* Bullet box - AZUL */}
+                        <div className="w-8 h-8 bg-[#2563eb] flex items-center justify-center flex-shrink-0 group-hover:bg-[#ffd700] transition-colors">
                           <span className="text-white group-hover:text-[#1a1a1a] font-bold">▸</span>
                         </div>
                         <span className="text-lg text-white/90 pt-1">{item}</span>
@@ -273,20 +279,20 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Image */}
+            {/* Image - Border/Overlay AZUL */}
             <div className="order-1 md:order-2 relative group">
-              <div className="absolute inset-0 bg-[#c41e3a] opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
+              <div className="absolute inset-0 bg-[#2563eb] opacity-0 group-hover:opacity-10 transition-opacity duration-300" />
               <img
                 src="/images/strategy-image.png"
                 alt="Estratégia e planejamento em camadas"
-                className="w-full h-auto border-8 border-[#c41e3a] group-hover:shadow-2xl transition-all duration-300"
+                className="w-full h-auto border-8 border-[#2563eb] group-hover:shadow-2xl transition-all duration-300"
               />
             </div>
           </div>
         </div>
       </section>
 
-      {/* PROBLEM SECTION */}
+      {/* PROBLEM SECTION - MANTIDA A COR VERMELHA ORIGINAL CONFORME SOLICITADO */}
       <section 
         id="problem"
         data-section
@@ -340,7 +346,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* PRODUCT EXPLANATION SECTION */}
+      {/* PRODUCT EXPLANATION SECTION - Border/Details AZUL */}
       <section 
         id="product"
         data-section
@@ -349,9 +355,9 @@ export default function Home() {
         }`}
       >
         <div className="container max-w-6xl">
-          <div className="bg-[#1a1a1a] border-8 border-[#c41e3a] p-8 md:p-16 relative overflow-hidden group">
-            {/* Background accent */}
-            <div className="absolute top-0 right-0 w-96 h-96 bg-[#c41e3a]/5 rounded-full blur-3xl group-hover:bg-[#c41e3a]/10 transition-all duration-300" />
+          <div className="bg-[#1a1a1a] border-8 border-[#2563eb] p-8 md:p-16 relative overflow-hidden group">
+            {/* Background accent - AZUL */}
+            <div className="absolute top-0 right-0 w-96 h-96 bg-[#2563eb]/5 rounded-full blur-3xl group-hover:bg-[#2563eb]/10 transition-all duration-300" />
 
             <div className="grid md:grid-cols-2 gap-12 items-center relative z-10">
               {/* Image */}
@@ -382,7 +388,8 @@ export default function Home() {
                     "não aceitam mais ser surpreendidas no final"
                   ].map((item, idx) => (
                     <div key={idx} className="flex items-start gap-4 group/item">
-                      <div className="w-10 h-10 bg-[#c41e3a] flex items-center justify-center flex-shrink-0 group-hover/item:bg-[#ffd700] transition-all">
+                      {/* Check box - AZUL */}
+                      <div className="w-10 h-10 bg-[#2563eb] flex items-center justify-center flex-shrink-0 group-hover/item:bg-[#ffd700] transition-all">
                         <span className="text-white group-hover/item:text-[#1a1a1a] font-black text-lg">✓</span>
                       </div>
                       <span className="text-lg text-white/90 group-hover/item:text-white transition-colors pt-1">{item}</span>
@@ -430,9 +437,11 @@ export default function Home() {
             ].map((item, index) => (
               <div
                 key={index}
-                className="flex items-start gap-4 text-lg md:text-xl text-white bg-[#0d0d0d] p-6 md:p-8 border-l-8 border-[#c41e3a] group hover:bg-[#1a1a1a] transition-all duration-300 cursor-pointer transform hover:translate-x-2"
+                // Border AZUL, hover effects
+                className="flex items-start gap-4 text-lg md:text-xl text-white bg-[#0d0d0d] p-6 md:p-8 border-l-8 border-[#2563eb] group hover:bg-[#1a1a1a] transition-all duration-300 cursor-pointer transform hover:translate-x-2"
               >
-                <span className="text-2xl md:text-3xl text-[#ffd700] flex-shrink-0 font-black group-hover:text-[#c41e3a] transition-colors">✔️</span>
+                {/* Icon Hover AZUL */}
+                <span className="text-2xl md:text-3xl text-[#ffd700] flex-shrink-0 font-black group-hover:text-[#2563eb] transition-colors">✔️</span>
                 <span className="group-hover:text-[#ffd700] transition-colors">{item}</span>
               </div>
             ))}
@@ -462,9 +471,9 @@ export default function Home() {
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
-            {/* É para você */}
-            <div className="bg-[#1a1a1a] p-8 md:p-10 border-8 border-[#c41e3a] group hover:shadow-2xl transition-all duration-300">
-              <h3 className="text-2xl md:text-3xl font-black text-[#c41e3a] mb-8 group-hover:text-[#ffd700] transition-colors">
+            {/* É para você - Border AZUL */}
+            <div className="bg-[#1a1a1a] p-8 md:p-10 border-8 border-[#2563eb] group hover:shadow-2xl transition-all duration-300">
+              <h3 className="text-2xl md:text-3xl font-black text-[#2563eb] mb-8 group-hover:text-[#ffd700] transition-colors">
                 É para você, se:
               </h3>
               <ul className="space-y-5">
@@ -475,14 +484,14 @@ export default function Home() {
                   "você prefere leitura crítica a torcida cega"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 group/item">
-                    <span className="text-[#c41e3a] text-2xl font-black flex-shrink-0 group-hover/item:text-[#ffd700] transition-colors">✓</span>
+                    <span className="text-[#2563eb] text-2xl font-black flex-shrink-0 group-hover/item:text-[#ffd700] transition-colors">✓</span>
                     <span className="text-lg text-white/90 group-hover/item:text-white transition-colors pt-1">{item}</span>
                   </li>
                 ))}
               </ul>
             </div>
 
-            {/* Não é para */}
+            {/* Não é para - Hover icon AZUL */}
             <div className="bg-[#0d0d0d] p-8 md:p-10 border-8 border-white/20 group hover:border-white/40 transition-all duration-300">
               <h3 className="text-2xl md:text-3xl font-black text-white/70 mb-8 group-hover:text-white transition-colors">
                 Não é para:
@@ -494,7 +503,7 @@ export default function Home() {
                   "militância vazia"
                 ].map((item, idx) => (
                   <li key={idx} className="flex items-start gap-3 group/item">
-                    <span className="text-white/40 text-2xl font-black flex-shrink-0 group-hover/item:text-[#c41e3a] transition-colors">×</span>
+                    <span className="text-white/40 text-2xl font-black flex-shrink-0 group-hover/item:text-[#2563eb] transition-colors">×</span>
                     <span className="text-lg text-white/60 group-hover/item:text-white/80 transition-colors pt-1">{item}</span>
                   </li>
                 ))}
@@ -504,7 +513,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* URGENCY SECTION */}
+      {/* URGENCY SECTION - Border Left AZUL */}
       <section 
         id="urgency"
         data-section
@@ -529,7 +538,7 @@ export default function Home() {
               </h2>
 
               <div className="space-y-6">
-                <div className="bg-[#0d0d0d] p-8 border-l-8 border-[#c41e3a]">
+                <div className="bg-[#0d0d0d] p-8 border-l-8 border-[#2563eb]">
                   <p className="text-xl text-white/90 leading-relaxed">
                     Toda eleição parece diferente.<br />
                     <span className="text-white font-bold text-2xl">Mas os métodos se repetem.</span>
@@ -541,7 +550,8 @@ export default function Home() {
                   <span className="text-white font-bold">não precisa se perguntar depois:</span>
                 </p>
 
-                <div className="bg-[#c41e3a] p-8 md:p-10">
+                {/* Box AZUL */}
+                <div className="bg-[#2563eb] p-8 md:p-10">
                   <p className="text-2xl md:text-3xl font-black text-white">
                     "como isso aconteceu de novo?"
                   </p>
@@ -574,9 +584,11 @@ export default function Home() {
             ].map((testimonial, index) => (
               <div
                 key={index}
-                className="bg-[#1a1a1a] p-8 md:p-10 border-8 border-white/10 relative group hover:border-[#c41e3a] transition-all duration-300 hover:shadow-2xl"
+                // Hover Border AZUL
+                className="bg-[#1a1a1a] p-8 md:p-10 border-8 border-white/10 relative group hover:border-[#2563eb] transition-all duration-300 hover:shadow-2xl"
               >
-                <div className="text-7xl text-[#c41e3a] opacity-20 absolute top-4 left-4 group-hover:opacity-40 transition-opacity">"</div>
+                {/* Quote Icon AZUL */}
+                <div className="text-7xl text-[#2563eb] opacity-20 absolute top-4 left-4 group-hover:opacity-40 transition-opacity">"</div>
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed relative z-10 pt-8 group-hover:text-white transition-colors">
                   {testimonial}
                 </p>
@@ -586,7 +598,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* OFFER SECTION */}
+      {/* OFFER SECTION - Border/Button AZUL */}
       <section 
         id="offer"
         data-section
@@ -595,9 +607,9 @@ export default function Home() {
         }`}
       >
         <div className="container max-w-5xl">
-          <div className="bg-gradient-to-br from-[#0d0d0d] to-[#1a1a1a] border-8 border-[#c41e3a] p-8 md:p-16 relative overflow-hidden group">
-            {/* Animated background */}
-            <div className="absolute inset-0 bg-gradient-to-r from-[#c41e3a]/5 via-transparent to-[#ffd700]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          <div className="bg-gradient-to-br from-[#0d0d0d] to-[#1a1a1a] border-8 border-[#2563eb] p-8 md:p-16 relative overflow-hidden group">
+            {/* Animated background - AZUL */}
+            <div className="absolute inset-0 bg-gradient-to-r from-[#2563eb]/5 via-transparent to-[#ffd700]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
             <div className="relative z-10 space-y-12">
               <h2 className="text-3xl md:text-5xl font-black text-white text-center leading-tight">
@@ -609,9 +621,9 @@ export default function Home() {
                 Todo esse conteúdo foi organizado para entregar clareza antes que o jogo termine — não para elitizar informação.
               </p>
 
-              {/* Price highlight */}
+              {/* Price highlight - AZUL */}
               <div className="flex justify-center">
-                <div className="bg-[#c41e3a] border-8 border-[#ffd700] p-8 md:p-12 text-center group/price hover:bg-[#a01828] transition-all duration-300">
+                <div className="bg-[#2563eb] border-8 border-[#ffd700] p-8 md:p-12 text-center group/price hover:bg-[#1d4ed8] transition-all duration-300">
                   <p className="text-white/80 text-lg md:text-xl mb-2">Acesso completo por apenas</p>
                   <p className="text-white font-black text-7xl md:text-8xl leading-none">R$14,90</p>
                   <p className="text-white/70 text-sm md:text-base mt-4 font-medium">Menos do que uma refeição fora de casa</p>
@@ -632,11 +644,11 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* CTA Button */}
+              {/* CTA Button - AZUL */}
               <div className="flex justify-center pt-8">
                 <Button
                   onClick={handleCTA}
-                  className="bg-[#c41e3a] hover:bg-[#a01828] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-8 md:py-10 h-auto transition-all duration-200 relative group/btn overflow-hidden border-4 border-[#ffd700]"
+                  className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-8 md:py-10 h-auto transition-all duration-200 relative group/btn overflow-hidden border-4 border-[#ffd700]"
                 >
                   <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left" />
                   <span className="relative z-10 group-hover/btn:text-[#1a1a1a] transition-colors">
@@ -649,7 +661,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FINAL CTA SECTION */}
+      {/* FINAL CTA SECTION - AZUL */}
       <section 
         id="final-cta"
         data-section
@@ -658,7 +670,7 @@ export default function Home() {
         }`}
       >
         <div className="container max-w-4xl text-center">
-          <h2 className="text-3xl md:text-5xl font-black text-[#c41e3a] mb-12">
+          <h2 className="text-3xl md:text-5xl font-black text-[#2563eb] mb-12">
             🔴 Entender agora ou<br />
             <span className="text-white">se surpreender depois</span>
           </h2>
@@ -679,9 +691,10 @@ export default function Home() {
             </div>
           </div>
 
+          {/* Button AZUL */}
           <Button
             onClick={handleCTA}
-            className="bg-[#c41e3a] hover:bg-[#a01828] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-8 md:py-10 h-auto transition-all duration-200 relative group/btn overflow-hidden border-4 border-[#ffd700]"
+            className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-8 md:py-10 h-auto transition-all duration-200 relative group/btn overflow-hidden border-4 border-[#ffd700]"
           >
             <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left" />
             <span className="relative z-10 group-hover/btn:text-[#1a1a1a] transition-colors">
