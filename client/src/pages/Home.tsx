@@ -31,8 +31,17 @@ export default function Home() {
 
   const checkoutURL = "https://pay.kirvano.com/6d5227c5-8fef-42b6-b06a-7a1d7fb4b5af";
 
-  const handleCTA = () => {
+  // Função para ir direto ao checkout (usada APENAS na seção de Oferta)
+  const handleCheckout = () => {
     window.location.href = checkoutURL;
+  };
+
+  // Função para rolar até a seção de Oferta (usada em TODOS os outros botões)
+  const scrollToOffer = () => {
+    const offerSection = document.getElementById("offer");
+    if (offerSection) {
+      offerSection.scrollIntoView({ behavior: "smooth" });
+    }
   };
 
   return (
@@ -107,10 +116,10 @@ export default function Home() {
               </div>
             </div>
 
-            {/* CTA Button - AZUL */}
+            {/* CTA Button - AZUL (SCROLL TO OFFER) */}
             <div className="pt-12 flex justify-center">
               <Button
-                onClick={handleCTA}
+                onClick={scrollToOffer}
                 className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
               >
                 {/* Background effect */}
@@ -335,9 +344,10 @@ export default function Home() {
                 <p className="text-2xl md:text-3xl font-bold text-white leading-snug">
                   Enquanto isso, a narrativa já foi construída.
                 </p>
+                {/* BUTTON PROBLEM SECTION -> SCROLL TO OFFER */}
                 <div className="pt-12 flex justify-center">
               <Button
-                onClick={handleCTA}
+                onClick={scrollToOffer}
                 className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
               >
                 {/* Background effect */}
@@ -469,9 +479,10 @@ export default function Home() {
           </div>
         </div>
       </section>
+            {/* FLOATING CTA AFTER BENEFITS -> SCROLL TO OFFER */}
             <div className="pt-12 flex justify-center">
               <Button
-                onClick={handleCTA}
+                onClick={scrollToOffer}
                 className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
               >
                 {/* Background effect */}
@@ -495,7 +506,7 @@ export default function Home() {
         <div className="container max-w-5xl">
           <h2 className="text-3xl md:text-5xl font-black text-white mb-16 text-center">
             👤 Este material é para você<br />
-            <span className="text-[#ffd700]">— e não é para todo mundo</span>
+            <span className="text-[#ffd700">— e não é para todo mundo</span>
           </h2>
 
           <div className="grid md:grid-cols-2 gap-8">
@@ -627,6 +638,7 @@ export default function Home() {
       </section>
 
       {/* OFFER SECTION - Border/Button AZUL */}
+      {/* ESTE É O DESTINO DO SCROLL */}
       <section 
         id="offer"
         data-section
@@ -672,10 +684,10 @@ export default function Home() {
                 ))}
               </div>
 
-              {/* CTA Button - AZUL */}
+              {/* CTA Button - AZUL -> ESTE BOTÃO VAI PARA O CHECKOUT */}
               <div className="flex justify-center pt-8">
                 <Button
-                  onClick={handleCTA}
+                  onClick={handleCheckout}
                   className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-8 md:py-10 h-auto transition-all duration-200 relative group/btn overflow-hidden border-4 border-[#ffd700]"
                 >
                   <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left" />
@@ -719,9 +731,9 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Button AZUL */}
+          {/* Button AZUL -> SCROLL TO OFFER (Para garantir a leitura dos detalhes antes) */}
           <Button
-            onClick={handleCTA}
+            onClick={scrollToOffer}
             className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-8 md:py-10 h-auto transition-all duration-200 relative group/btn overflow-hidden border-4 border-[#ffd700]"
           >
             <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left" />
