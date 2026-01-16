@@ -360,7 +360,16 @@ export default function Home() {
                   Enquanto isso, a narrativa já foi construída.
                 </p>
                 {/* BUTTON PROBLEM SECTION -> SCROLL TO OFFER */}
-                <div className="pt-12 flex justify-center">
+                
+                <p className="text-lg md:text-xl text-white/90">
+                  E quando a narrativa está pronta,<br />
+                  <span className="text-white font-bold text-2xl">o voto vira apenas o ato final.</span>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="pt-12 flex justify-center">
               <Button
                 onClick={scrollToOffer}
                 className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
@@ -375,14 +384,6 @@ export default function Home() {
                 </span>
               </Button>
             </div>
-                <p className="text-lg md:text-xl text-white/90">
-                  E quando a narrativa está pronta,<br />
-                  <span className="text-white font-bold text-2xl">o voto vira apenas o ato final.</span>
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
       </section>
 
       {/* PRODUCT EXPLANATION SECTION - Border/Details AZUL */}
