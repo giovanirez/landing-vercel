@@ -29,7 +29,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const checkoutURL = "https://www.alemdopoder.com.br/";
+  const checkoutURL = "https://pay.kirvano.com/6d5227c5-8fef-42b6-b06a-7a1d7fb4b5af";
 
   const handleCTA = () => {
     window.location.href = checkoutURL;
