@@ -29,7 +29,7 @@ export default function Home() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const checkoutURL = "https://seguro.detalhesdolar.com.br/checkout?skipToCheckout=1&_ga=GA1.1.142772872.1764463783";
+  const checkoutURL = "https://www.alemdopoder.com.br/";
 
   const handleCTA = () => {
     window.location.href = checkoutURL;
@@ -119,7 +119,7 @@ export default function Home() {
                 {/* Text */}
                 <span className="relative z-10 flex items-center gap-3">
                   <span>ACESSAR AGORA POR</span>
-                  <span className="text-2xl font-black">R$14,90</span>
+                  <span className="text-2xl font-black">R$17,90</span>
                 </span>
               </Button>
             </div>
@@ -625,7 +625,7 @@ export default function Home() {
               <div className="flex justify-center">
                 <div className="bg-[#2563eb] border-8 border-[#ffd700] p-8 md:p-12 text-center group/price hover:bg-[#1d4ed8] transition-all duration-300">
                   <p className="text-white/80 text-lg md:text-xl mb-2">Acesso completo por apenas</p>
-                  <p className="text-white font-black text-7xl md:text-8xl leading-none">R$14,90</p>
+                  <p className="text-white font-black text-7xl md:text-8xl leading-none">R$17,90</p>
                   <p className="text-white/70 text-sm md:text-base mt-4 font-medium">Menos do que uma refeição fora de casa</p>
                 </div>
               </div>
@@ -652,7 +652,7 @@ export default function Home() {
                 >
                   <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left" />
                   <span className="relative z-10 group-hover/btn:text-[#1a1a1a] transition-colors">
-                    Acessar agora por R$14,90
+                    Acessar agora por R$17,90
                   </span>
                 </Button>
               </div>
@@ -686,7 +686,7 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
                 Se você é de direita<br />
                 e não quer ser pego de surpresa novamente,<br />
-                <span className="text-white font-bold text-2xl md:text-3xl">o acesso está liberado agora por apenas R$14,90.</span>
+                <span className="text-white font-bold text-2xl md:text-3xl">o acesso está liberado agora por apenas R$17,90.</span>
               </p>
             </div>
           </div>
@@ -698,7 +698,7 @@ export default function Home() {
           >
             <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover/btn:scale-x-100 transition-transform duration-300 origin-left" />
             <span className="relative z-10 group-hover/btn:text-[#1a1a1a] transition-colors">
-              Clique aqui para acessar por R$14,90
+              Clique aqui para acessar por R$17,90
             </span>
           </Button>
         </div>
