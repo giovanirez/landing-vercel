@@ -299,6 +299,21 @@ export default function Home() {
             </div>
           </div>
         </div>
+        <div className="pt-12 flex justify-center">
+              <Button
+                onClick={scrollToOffer}
+                className="bg-[#2563eb] hover:bg-[#1d4ed8] text-white font-black text-lg md:text-xl px-12 md:px-16 py-6 md:py-8 h-auto transition-all duration-200 relative group overflow-hidden"
+              >
+                {/* Background effect */}
+                <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
+                
+                {/* Text */}
+                <span className="relative z-10 flex items-center gap-3">
+                  <span>ENTENDA O JOGO POR</span>
+                  <span className="text-2xl font-black">R$17,90</span>
+                </span>
+              </Button>
+            </div>
       </section>
 
       {/* PROBLEM SECTION - MANTIDA A COR VERMELHA ORIGINAL CONFORME SOLICITADO */}
