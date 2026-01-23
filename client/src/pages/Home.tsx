@@ -86,11 +86,9 @@ export default function Home() {
                 A Esquerda
               </h1>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85] text-white">
-                Não Ganha
+                Não Vence
               </h1>
               <h1 className="text-5xl md:text-7xl lg:text-8xl font-black tracking-tighter leading-[0.85]">
-                <span className="text-white">Eleições</span>
-                <br />
                 <span className="text-[#2563eb] relative">
                   no Voto.
                   <span className="absolute bottom-0 left-0 w-full h-2 bg-[#ffd700]" />
@@ -100,8 +98,8 @@ export default function Home() {
 
             <div className="pt-8">
               <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 leading-tight">
-                Entenda o jogo<br />
-                <span className="text-[#ffd700]">antes que ele termine.</span>
+                O jogo é outro <br />
+                <span className="text-[#ffd700]">e você precisa entender antes que seja tarde demais.</span>
               </p>
             </div>
 
@@ -114,12 +112,8 @@ export default function Home() {
               </div>
               
               <div className="space-y-3 text-white/80">
-                <p className="text-lg">
-                  <span className="text-white font-bold">Não por torcida.</span><br />
-                  <span className="text-white font-bold">Não por slogans.</span>
-                </p>
                 <p className="text-lg leading-relaxed">
-                  Mas porque entender o jogo é a única forma de não ser surpreendido de novo.
+                  Porque entender o jogo é a única forma de não ser surpreendido de novo.
                 </p>
               </div>
             </div>
@@ -131,7 +125,7 @@ export default function Home() {
               >
                 <span className="absolute inset-0 bg-[#ffd700] transform scale-x-0 group-hover:scale-x-100 transition-transform duration-300 origin-left" />
                 <span className="relative z-10 flex items-center gap-3">
-                  <span>ACESSAR AGORA POR</span>
+                  <span>ENTENDA O JOGO POR</span>
                   <span className="text-2xl font-black">R$17,90</span>
                 </span>
               </Button>
@@ -365,7 +359,6 @@ export default function Home() {
                 </p>
                 
                 <p className="text-lg md:text-xl text-white/90">
-                  E quando a narrativa está pronta,<br />
                   <span className="text-white font-bold text-2xl">o voto vira apenas o ato final.</span>
                 </p>
               </div>
