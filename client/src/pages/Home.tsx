@@ -411,7 +411,7 @@ export default function Home() {
                 </h2>
 
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                  <span className="font-bold text-white">"A Esquerda Não Ganha Eleições no Voto"</span> é um material analítico e direto, criado para pessoas de direita que:
+                  <span className="font-bold text-white">"Além do Poder"</span> é um material analítico e direto, criado para pessoas de direita que:
                 </p>
 
                 <div className="space-y-4">
@@ -744,7 +744,7 @@ export default function Home() {
 
           <div className="space-y-8 mb-16">
             <p className="text-3xl md:text-4xl font-black text-white leading-tight">
-              A Esquerda Não Ganha Eleições no Voto.
+              A Esquerda Não Vence no Voto.
             </p>
             <p className="text-2xl md:text-3xl font-bold text-white/90">
               Entenda o jogo antes que ele termine.
