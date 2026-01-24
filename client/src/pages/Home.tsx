@@ -70,10 +70,11 @@ export default function Home() {
         className="relative min-h-screen flex items-center justify-center overflow-hidden"
       >
         <div className="absolute inset-0 z-0">
+          {/* IMAGEM CENTRALIZADA AQUI: Adicionado object-center */}
           <img
-            src="/images/hero-image.png"
-            alt="Poder oculto e controle institucional"
-            className="w-full h-full object-cover opacity-35"
+            src="/images/brasilia-hero.jpg"
+            alt="Congresso Nacional em Brasília sob atmosfera sombria e misteriosa"
+            className="w-full h-full object-cover object-center opacity-35"
           />
           <div className="absolute inset-0 bg-gradient-to-b from-[#1a1a1a]/40 via-[#1a1a1a]/70 to-[#1a1a1a]" />
           <div className="absolute top-0 right-0 w-96 h-96 bg-gradient-to-br from-[#2563eb]/10 to-transparent rounded-full blur-3xl" />
@@ -98,7 +99,7 @@ export default function Home() {
 
             <div className="pt-8">
               <p className="text-2xl md:text-3xl lg:text-4xl font-bold text-white/90 leading-tight">
-                O jogo é outro <br />
+                O jogo é outro —<br />
                 <span className="text-[#ffd700]">e você precisa entender antes que seja tarde demais.</span>
               </p>
             </div>
@@ -411,7 +412,7 @@ export default function Home() {
                 </h2>
 
                 <p className="text-lg md:text-xl text-white/90 leading-relaxed">
-                  <span className="font-bold text-white">"Além do Poder"</span> é um material analítico e direto, criado para pessoas de direita que:
+                  <span className="font-bold text-white">"A Esquerda Não Ganha Eleições no Voto"</span> é um material analítico e direto, criado para pessoas de direita que:
                 </p>
 
                 <div className="space-y-4">
@@ -520,7 +521,7 @@ export default function Home() {
             <FaUser className="text-6xl text-blue-400 mb-6" />
             <h2 className="text-3xl md:text-5xl font-black text-white text-center">
               Este material é para você<br />
-              <span className="text-[#ffd700">— e não é para todo mundo</span>
+              <span className="text-[#ffd700]">— e não é para todo mundo</span>
             </h2>
           </div>
 
@@ -744,7 +745,7 @@ export default function Home() {
 
           <div className="space-y-8 mb-16">
             <p className="text-3xl md:text-4xl font-black text-white leading-tight">
-              A Esquerda Não Vence no Voto.
+              A Esquerda Não Ganha Eleições no Voto.
             </p>
             <p className="text-2xl md:text-3xl font-bold text-white/90">
               Entenda o jogo antes que ele termine.
