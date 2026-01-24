@@ -622,10 +622,19 @@ export default function Home() {
                     "como isso aconteceu de novo?"
                   </p>
                 </div>
+                <div className="pt-4">
+                  <Button
+                    onClick={scrollToOffer}
+                    className="w-full bg-[#ffd700] hover:bg-[#e6c200] text-[#1a1a1a] font-black text-lg md:text-xl py-6 md:py-8 h-auto transition-all duration-200 shadow-[0_0_20px_rgba(255,215,0,0.3)] hover:shadow-[0_0_30px_rgba(255,215,0,0.5)]"
+                  >
+                    R$17,90 PARA SAIR DA BOLHA
+                  </Button>
+                </div>
               </div>
             </div>
           </div>
         </div>
+        
       </section>
 
       {/* SOCIAL PROOF SECTION */}
