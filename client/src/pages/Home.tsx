@@ -51,6 +51,14 @@ export default function Home() {
   const checkoutURL = "https://pay.kirvano.com/6d5227c5-8fef-42b6-b06a-7a1d7fb4b5af";
 
   const handleCheckout = () => {
+    // Código adicionado para rastrear o clique:
+    // @ts-ignore 
+    if (typeof window.fbq === 'function') {
+       // @ts-ignore
+       window.fbq('track', 'InitiateCheckout'); 
+    }
+
+    // Redireciona para o checkout logo em seguida
     window.location.href = checkoutURL;
   };
 
