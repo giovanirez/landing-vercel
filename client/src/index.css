@@ -1,9 +1,11 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
+/* Em Tailwind v4, use @variant para variantes customizadas */
+@variant dark (&:is(.dark *));
 
-@theme inline {
+/* Removido o "inline", deve ser apenas @theme */
+@theme {
   --radius-sm: 0.3rem;
   --radius-md: 0.5rem;
   --radius-lg: 0.8rem;
@@ -15,14 +17,32 @@
   --color-brasil-green: #009c3b;
   --color-brasil-yellow: #ffdf00;
   --color-brasil-blue: #002776;
+
+  /* Mapeando as variáveis do Tailwind para as variáveis CSS definidas abaixo */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
 }
 
+/* Paleta Patriota Moderna */
 :root {
   /* Fundo escuro elegante */
   --background: #050505; 
   --foreground: #ffffff;
   
-  /* Verde Bandeira Neon */
+  /* Verde Bandeira Neon - CORRIGIDO PARA EVITAR BOTÕES VERMELHOS */
   --primary: #00c24a; 
   --primary-foreground: #000000;
   
@@ -32,6 +52,12 @@
   
   --muted: #1f2937;
   --muted-foreground: #9ca3af;
+  
+  --accent: #002776;
+  --accent-foreground: #ffffff;
+  
+  --destructive: #ef4444;
+  --destructive-foreground: #ffffff;
   
   --border: #2e353f;
   --input: #1f2937;
@@ -74,38 +100,6 @@
   .glass-card:hover {
     border-color: rgba(0, 194, 74, 0.3);
     box-shadow: 0 0 25px rgba(0, 194, 74, 0.15);
-  }
-
-  /* Botão Patriota Estiloso */
-  .btn-patriota {
-    background: linear-gradient(135deg, #009c3b 0%, #00c24a 100%);
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow: 0 0 15px rgba(0, 156, 59, 0.3);
-    color: white;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-  }
-
-  .btn-patriota:hover {
-    box-shadow: 0 0 30px rgba(0, 156, 59, 0.6);
-    transform: translateY(-2px);
-    background: linear-gradient(135deg, #00b042 0%, #00d652 100%);
-  }
-  
-  /* Variação Amarela do Botão */
-  .btn-patriota-yellow {
-    background: linear-gradient(135deg, #e6c200 0%, #ffdf00 100%);
-    color: black;
-    box-shadow: 0 0 15px rgba(255, 223, 0, 0.3);
-  }
-  
-  .btn-patriota-yellow:hover {
-    box-shadow: 0 0 30px rgba(255, 223, 0, 0.6);
-    background: linear-gradient(135deg, #ffdf00 0%, #ffe63b 100%);
   }
 
   /* Texto Gradiente Brasil */
