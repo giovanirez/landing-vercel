@@ -1,26 +1,19 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-/* Em Tailwind v4, use @variant para variantes customizadas */
-@variant dark (&:is(.dark *));
+@custom-variant dark (&:is(.dark *));
 
-/* Removido o "inline", deve ser apenas @theme */
-@theme {
-  --radius-sm: 0.3rem;
-  --radius-md: 0.5rem;
-  --radius-lg: 0.8rem;
-  --radius-xl: 1rem;
-  
-  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
-  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
-  
-  --color-brasil-green: #009c3b;
-  --color-brasil-yellow: #ffdf00;
-  --color-brasil-blue: #002776;
-
-  /* Mapeando as variáveis do Tailwind para as variáveis CSS definidas abaixo */
+@theme inline {
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
   --color-primary: var(--primary);
   --color-primary-foreground: var(--primary-foreground);
   --color-secondary: var(--secondary);
@@ -34,34 +27,94 @@
   --color-border: var(--border);
   --color-input: var(--input);
   --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+  
+  --font-display: 'Space Grotesk', system-ui, -apple-system, sans-serif;
+  --font-body: 'IBM Plex Sans', system-ui, -apple-system, sans-serif;
 }
 
-/* Paleta Patriota Moderna */
+/* Brutalismo Político Contemporâneo - Paleta de Tensão Controlada */
 :root {
-  /* Fundo escuro elegante */
-  --background: #050505; 
-  --foreground: #ffffff;
-  
-  /* Verde Bandeira Neon - CORRIGIDO PARA EVITAR BOTÕES VERMELHOS */
-  --primary: #00c24a; 
-  --primary-foreground: #000000;
-  
-  /* Amarelo Ouro */
-  --secondary: #ffdf00;
-  --secondary-foreground: #000000;
-  
-  --muted: #1f2937;
-  --muted-foreground: #9ca3af;
-  
-  --accent: #002776;
+  --primary: #c41e3a; /* Vermelho institucional */
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #c41e3a;
+  --sidebar-primary-foreground: #ffffff;
+  --chart-1: #c41e3a;
+  --chart-2: #ffd700;
+  --chart-3: #1a1a1a;
+  --chart-4: #ffffff;
+  --chart-5: #666666;
+  --radius: 0;
+  --background: #1a1a1a; /* Cinza carvão profundo */
+  --foreground: #ffffff; /* Branco puro */
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --secondary: #ffd700; /* Amarelo alerta */
+  --secondary-foreground: #1a1a1a;
+  --muted: #333333;
+  --muted-foreground: #999999;
+  --accent: #c41e3a;
   --accent-foreground: #ffffff;
-  
-  --destructive: #ef4444;
+  --destructive: #c41e3a;
   --destructive-foreground: #ffffff;
-  
-  --border: #2e353f;
-  --input: #1f2937;
-  --ring: #00c24a;
+  --border: #ffffff;
+  --input: #333333;
+  --ring: #c41e3a;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-accent: #c41e3a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #ffffff;
+  --sidebar-ring: #c41e3a;
+}
+
+.dark {
+  --primary: #c41e3a;
+  --primary-foreground: #ffffff;
+  --sidebar-primary: #c41e3a;
+  --sidebar-primary-foreground: #ffffff;
+  --background: #1a1a1a;
+  --foreground: #ffffff;
+  --card: #1a1a1a;
+  --card-foreground: #ffffff;
+  --popover: #1a1a1a;
+  --popover-foreground: #ffffff;
+  --secondary: #ffd700;
+  --secondary-foreground: #1a1a1a;
+  --muted: #333333;
+  --muted-foreground: #999999;
+  --accent: #c41e3a;
+  --accent-foreground: #ffffff;
+  --destructive: #c41e3a;
+  --destructive-foreground: #ffffff;
+  --border: #ffffff;
+  --input: #333333;
+  --ring: #c41e3a;
+  --chart-1: #c41e3a;
+  --chart-2: #ffd700;
+  --chart-3: #1a1a1a;
+  --chart-4: #ffffff;
+  --chart-5: #666666;
+  --sidebar: #1a1a1a;
+  --sidebar-foreground: #ffffff;
+  --sidebar-accent: #c41e3a;
+  --sidebar-accent-foreground: #ffffff;
+  --sidebar-border: #ffffff;
+  --sidebar-ring: #c41e3a;
 }
 
 @layer base {
@@ -71,10 +124,22 @@
   body {
     @apply bg-background text-foreground;
     font-family: var(--font-body);
-    /* Background sutil global */
-    background-image: 
-      radial-gradient(circle at 15% 50%, rgba(0, 39, 118, 0.1) 0%, transparent 25%),
-      radial-gradient(circle at 85% 30%, rgba(0, 156, 59, 0.08) 0%, transparent 25%);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    font-weight: 700;
+    letter-spacing: -0.02em;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
   }
 }
 
@@ -85,28 +150,142 @@
     margin-right: auto;
     padding-left: 1rem;
     padding-right: 1rem;
-    max-width: 1280px;
-  }
-  
-  /* Efeito Vidro (Glassmorphism) */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.03);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.08);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
-  }
-  
-  .glass-card:hover {
-    border-color: rgba(0, 194, 74, 0.3);
-    box-shadow: 0 0 25px rgba(0, 194, 74, 0.15);
   }
 
-  /* Texto Gradiente Brasil */
-  .text-gradient-brasil {
-    background: linear-gradient(to right, #00c24a, #ffdf00);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+  
+  /* Brutalismo: Bordas grossas pretas */
+  .brutal-border {
+    border: 6px solid #000000;
+  }
+  
+  .brutal-border-top {
+    border-top: 6px solid #000000;
+  }
+  
+  .brutal-border-bottom {
+    border-bottom: 6px solid #000000;
+  }
+  
+  /* Sombras duras sem blur */
+  .brutal-shadow {
+    box-shadow: 10px 10px 0 rgba(0, 0, 0, 0.8);
+  }
+  
+  .brutal-shadow-sm {
+    box-shadow: 6px 6px 0 rgba(0, 0, 0, 0.8);
+  }
+}
+
+
+@layer utilities {
+  /* Animações de entrada */
+  @keyframes fade-in {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      opacity: 0;
+      transform: translateX(-30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      opacity: 0;
+      transform: translateX(30px);
+    }
+    to {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+
+  @keyframes scale-in {
+    from {
+      opacity: 0;
+      transform: scale(0.95);
+    }
+    to {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @keyframes glow-pulse {
+    0%, 100% {
+      box-shadow: 0 0 0 0 rgba(196, 30, 58, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(196, 30, 58, 0);
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-slide-in-left {
+    animation: slide-in-left 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-slide-in-right {
+    animation: slide-in-right 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-scale-in {
+    animation: scale-in 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .animate-glow-pulse {
+    animation: glow-pulse 2s infinite;
+  }
+
+  /* Efeitos de hover sofisticados */
+  .group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+  }
+
+  .group:hover .group-hover\:shadow-2xl {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+  }
+
+  /* Transições suaves */
+  * {
+    @apply transition-colors duration-200;
+  }
+
+  button, [role="button"] {
+    @apply transition-all duration-200;
   }
 }
