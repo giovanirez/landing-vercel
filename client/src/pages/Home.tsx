@@ -24,7 +24,12 @@ import {
   FaLock, 
   FaCircle,
   FaQuoteLeft,
-  FaFlag
+  FaFlag,
+  FaGift,
+  FaMapMarkedAlt,
+  FaClipboardCheck,
+  FaNewspaper,
+  FaCheckCircle
 } from "react-icons/fa";
 
 export default function Home() {
@@ -119,17 +124,7 @@ export default function Home() {
               </div>
             </div>
 
-            <div className="pt-12 flex justify-center">
-              <Button
-                onClick={scrollToOffer}
-                className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-xl px-12 py-8 h-auto rounded-xl shadow-[0_0_20px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
-              >
-                <span className="relative z-10 flex items-center gap-3">
-                  <span>ENTENDA O JOGO POR</span>
-                  <span className="bg-black/20 px-2 py-1 rounded text-[#ffdf00]">R$17,90</span>
-                </span>
-              </Button>
-            </div>
+            
 
             <div className="pt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50 font-medium">
               <div className="flex items-center gap-2">
@@ -421,7 +416,97 @@ export default function Home() {
           </div>
         </div>
       </section>
+                  {/* BONUS SECTION */}
+      <section 
+        id="bonus"
+        data-section
+        className={`py-24 relative overflow-hidden transition-all duration-1000 ${
+          visibleSections.has("bonus") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
+        }`}
+      >
+        {/* Elemento decorativo de fundo */}
+        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-[#00c24a]/5 rounded-full blur-[120px] pointer-events-none" />
 
+        <div className="container max-w-6xl relative z-10">
+          <div className="flex flex-col items-center text-center mb-16 space-y-6">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-[#ffdf00]/30 bg-[#ffdf00]/10 backdrop-blur-md shadow-[0_0_15px_rgba(255,223,0,0.2)]">
+              <FaGift className="text-[#ffdf00]" />
+              <span className="text-[#ffdf00] font-bold text-sm tracking-widest uppercase">Acesso Gratuito</span>
+            </div>
+            
+            <h2 className="text-3xl md:text-5xl font-black text-white">
+              Bônus Exclusivos<br />
+              <span className="text-[#00c24a]">Liberados Gratuitamente</span>
+            </h2>
+            
+            <p className="text-xl text-white/70 max-w-3xl mx-auto leading-relaxed">
+              Ao acessar o material principal, você também recebe conteúdos gratuitos que ampliam sua leitura do jogo — <span className="text-white font-bold">sem pagar nada a mais.</span>
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-3 gap-6">
+            {/* BÔNUS 1 */}
+            <div className="group glass-card p-8 rounded-3xl border border-white/10 hover:border-[#00c24a] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(0,196,59,0.15)] flex flex-col">
+              <div className="w-16 h-16 rounded-2xl bg-[#00c24a]/10 flex items-center justify-center mb-6 group-hover:bg-[#00c24a]/20 transition-colors">
+                <FaMapMarkedAlt className="text-3xl text-[#00c24a]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-white mb-4">
+                O Mapa do Jogo da Esquerda
+              </h3>
+              <p className="text-white/70 mb-8 flex-grow">
+                Veja, em uma única visão, como a esquerda constrói vantagem antes do voto — da pauta à narrativa.
+              </p>
+              <div className="mt-auto pt-6 border-t border-white/5 flex items-center gap-3">
+                <FaCheckCircle className="text-[#00c24a] text-xl" />
+                <span className="text-[#00c24a] font-bold text-sm uppercase tracking-wide">Bônus Incluso</span>
+              </div>
+            </div>
+
+            {/* BÔNUS 2 */}
+            <div className="group glass-card p-8 rounded-3xl border border-white/10 hover:border-[#ffdf00] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(255,223,0,0.15)] flex flex-col">
+              <div className="w-16 h-16 rounded-2xl bg-[#ffdf00]/10 flex items-center justify-center mb-6 group-hover:bg-[#ffdf00]/20 transition-colors">
+                <FaClipboardCheck className="text-3xl text-[#ffdf00]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-white mb-4">
+                Checklist: Como Saber se a Esquerda Já Está na Frente
+              </h3>
+              <p className="text-white/70 mb-8 flex-grow">
+                Identifique sinais claros de quando o jogo já começou e quando o cenário já está sendo moldado.
+              </p>
+              <div className="mt-auto pt-6 border-t border-white/5 flex items-center gap-3">
+                <FaCheckCircle className="text-[#00c24a] text-xl" />
+                <span className="text-[#00c24a] font-bold text-sm uppercase tracking-wide">Bônus Incluso</span>
+              </div>
+            </div>
+
+            {/* BÔNUS 3 */}
+            <div className="group glass-card p-8 rounded-3xl border border-white/10 hover:border-[#00c24a] transition-all duration-300 hover:-translate-y-2 hover:shadow-[0_0_30px_rgba(0,196,59,0.15)] flex flex-col">
+              <div className="w-16 h-16 rounded-2xl bg-[#00c24a]/10 flex items-center justify-center mb-6 group-hover:bg-[#00c24a]/20 transition-colors">
+                <FaNewspaper className="text-3xl text-[#00c24a]" />
+              </div>
+              <h3 className="text-xl md:text-2xl font-black text-white mb-4">
+                Guia Simples para Entender Notícias
+              </h3>
+              <p className="text-white/70 mb-8 flex-grow">
+                Aprenda a ler notícias com mais critério e separar informação de narrativa em períodos eleitorais.
+              </p>
+              <div className="mt-auto pt-6 border-t border-white/5 flex items-center gap-3">
+                <FaCheckCircle className="text-[#00c24a] text-xl" />
+                <span className="text-[#00c24a] font-bold text-sm uppercase tracking-wide">Bônus Incluso</span>
+              </div>
+            </div>
+          </div>
+
+          <div className="pt-16 flex justify-center">
+             <Button
+                onClick={scrollToOffer}
+                className="bg-transparent border border-[#00c24a] hover:bg-[#00c24a]/10 text-[#00c24a] font-bold text-lg px-10 py-6 h-auto rounded-xl transition-all"
+              >
+                QUERO GARANTIR MEUS BÔNUS
+              </Button>
+          </div>
+        </div>
+      </section>
       {/* CONTENT & BENEFITS SECTION */}
       <section 
         id="benefits"
