@@ -124,7 +124,6 @@ export default function Home() {
               </div>
             </div>
 
-            
 
             <div className="pt-8 flex flex-wrap justify-center gap-6 text-sm text-white/50 font-medium">
               <div className="flex items-center gap-2">
@@ -769,7 +768,7 @@ export default function Home() {
 
                   <div className="w-full max-w-md bg-[#121212] border border-[#00c24a]/30 rounded-2xl p-8 md:p-12 pt-12 text-center group/price hover:border-[#ffdf00] transition-all duration-300 relative">
                     <div className="absolute -top-3 left-1/2 -translate-x-1/2 bg-[#00c24a] text-white text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider hidden">Oportunidade</div>
-                    <p className="text-white/60 text-lg md:text-xl mb-2 line-through">De R$47,90</p>
+                    <p className="text-white/60 text-lg md:text-xl mb-2 line-through">De R$97,90</p>
                     <p className="text-white/80 text-lg md:text-xl mb-2">Por apenas</p>
                     <div className="flex items-center justify-center gap-1">
                       <span className="text-2xl text-[#00c24a]">R$</span>
