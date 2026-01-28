@@ -720,13 +720,13 @@ export default function Home() {
                     <p className="text-white/50 text-sm md:text-base mt-4 font-medium">Pagamento único. Acesso vitalício.</p>
                   </div>
                 </div>
-
                 {/* Features com Ícones Coloridos */}
                 <div className="grid md:grid-cols-3 gap-6">
                   {[
                     { icon: <FaBook className="text-[#00c24a]" />, text: "Conteúdo direto e organizado" },
                     { icon: <FaDownload className="text-[#ffdf00]" />, text: "Acesso digital imediato" },
-                    { icon: <FaLock className="text-[#00c24a]" />, text: "Leitura privada e segura" }
+                    // ALTERAÇÃO AQUI: De "Leitura privada" para "Bônus" e ícone de Presente
+                    { icon: <FaGift className="text-[#00c24a]" />, text: "+3 Bônus Exclusivos" }
                   ].map((feature, index) => (
                     <div key={index} className="text-center group/feature flex flex-col items-center">
                       <div className="text-4xl mb-4 group-hover/feature:scale-125 transition-transform duration-300 bg-[#1a1a1a] w-16 h-16 rounded-full flex items-center justify-center border border-white/5">
@@ -736,7 +736,6 @@ export default function Home() {
                     </div>
                   ))}
                 </div>
-
                 <div className="flex justify-center pt-8">
                   <Button
                     onClick={handleCheckout}
