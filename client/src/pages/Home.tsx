@@ -139,7 +139,7 @@ export default function Home() {
             onClick={scrollToOffer}
             className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
           >
-            SAIA DA NARRATIVA AGORA
+            ENTENDA O JOGO AGORA
           </Button>
             </div>
           </div>
@@ -281,7 +281,7 @@ export default function Home() {
               className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-xl px-12 py-8 h-auto rounded-xl shadow-[0_0_20px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
             >
               <span className="relative z-10 flex items-center gap-3">
-                <span>ENTENDA O JOGO</span>
+                <span>ENTENDA O JOGO DE NARRATIVA</span>
               </span>
             </Button>
           </div>
