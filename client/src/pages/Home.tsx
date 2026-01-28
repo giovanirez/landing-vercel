@@ -115,12 +115,7 @@ export default function Home() {
                 <span className="text-[#ffdf00] font-bold underline decoration-[#00c24a] decoration-4 underline-offset-4">antes que seja tarde demais.</span>
               </p>
             </div>
-            <Button
-            onClick={scrollToOffer}
-            className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
-          >
-            SAIA DA BOLHA
-          </Button>
+            
             <div className="max-w-2xl mx-auto pt-8 space-y-6">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-l-[#00c24a]">
                 <p className="text-lg md:text-xl text-white font-medium">
@@ -140,6 +135,12 @@ export default function Home() {
               <div className="flex items-center gap-2">
                 <FaCheck className="text-[#00c24a]" /> <span>Sem compromisso</span>
               </div>
+              <Button
+            onClick={scrollToOffer}
+            className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
+          >
+            SAIA DA NARRATIVA AGORA
+          </Button>
             </div>
           </div>
         </div>
