@@ -622,66 +622,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* URGENCY SECTION */}
-      <section 
-        id="urgency"
-        data-section
-        className={`py-24 relative overflow-hidden transition-all duration-1000 ${
-          visibleSections.has("urgency") ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-        }`}
-      >
-        <div className="container max-w-5xl relative z-10">
-          <div className="flex flex-col md:flex-row items-center gap-12 md:gap-16 glass-card p-10 rounded-3xl border border-[#ffdf00]/30">
-            <div className="flex-shrink-0 group">
-              <img
-                src="/images/urgency-icon.png"
-                alt="Urgência temporal"
-                className="w-40 h-40 md:w-56 md:h-56 group-hover:scale-110 transition-transform duration-300 drop-shadow-[0_0_20px_rgba(255,223,0,0.2)]"
-              />
-            </div>
-
-            <div className="space-y-8 flex-1">
-              <div className="flex items-start gap-4">
-                <FaHourglassHalf className="text-5xl text-[#ffdf00] flex-shrink-0 mt-1 animate-pulse" />
-                <h2 className="text-3xl md:text-5xl font-black text-white leading-tight">
-                  Por que ignorar isso agora<br />
-                  <span className="text-[#ffdf00]">cobra um preço depois</span>
-                </h2>
-              </div>
-
-              <div className="space-y-6">
-                <div className="bg-[#050505] p-6 rounded-xl border-l-4 border-[#00c24a]">
-                  <p className="text-xl text-white/90 leading-relaxed">
-                    Toda eleição parece diferente.<br />
-                    <span className="text-white font-bold text-2xl">Mas os métodos se repetem.</span>
-                  </p>
-                </div>
-
-                <p className="text-xl md:text-2xl text-white/80 leading-relaxed">
-                  Quem entende o jogo enquanto ele acontece,<br />
-                  <span className="text-white font-bold">não precisa se perguntar depois:</span>
-                </p>
-
-                <div className="bg-[#00c24a] p-6 rounded-xl shadow-lg">
-                  <p className="text-2xl md:text-3xl font-black text-white">
-                    "como isso aconteceu de novo?"
-                  </p>
-                </div>
-                
-                <div className="pt-4">
-                  <Button
-                    onClick={scrollToOffer}
-                    className="w-full bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-xl py-8 h-auto rounded-xl shadow-[0_0_20px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
-                  >
-                    R$17,90 PARA SAIR DA BOLHA
-                  </Button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* SOCIAL PROOF SECTION */}
       <section 
         id="social-proof"
