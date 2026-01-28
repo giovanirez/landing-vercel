@@ -502,11 +502,11 @@ export default function Home() {
 
           <div className="pt-16 flex justify-center">
              <Button
-                onClick={scrollToOffer}
-                className="bg-transparent border border-[#00c24a] hover:bg-[#00c24a]/10 text-[#00c24a] font-bold text-lg px-10 py-6 h-auto rounded-xl transition-all"
-              >
-                QUERO GARANTIR MEUS BÔNUS
-              </Button>
+            onClick={scrollToOffer}
+            className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
+          >
+            QUERO GARANTIR MEU BÔNUS
+          </Button>
           </div>
         </div>
       </section>
