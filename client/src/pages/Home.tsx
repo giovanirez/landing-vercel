@@ -115,7 +115,12 @@ export default function Home() {
                 <span className="text-[#ffdf00] font-bold underline decoration-[#00c24a] decoration-4 underline-offset-4">antes que seja tarde demais.</span>
               </p>
             </div>
-
+            <Button
+            onClick={scrollToOffer}
+            className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
+          >
+            SAIA DA BOLHA
+          </Button>
             <div className="max-w-2xl mx-auto pt-8 space-y-6">
               <div className="glass-card rounded-2xl p-6 border-l-4 border-l-[#00c24a]">
                 <p className="text-lg md:text-xl text-white font-medium">
@@ -275,8 +280,7 @@ export default function Home() {
               className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-xl px-12 py-8 h-auto rounded-xl shadow-[0_0_20px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
             >
               <span className="relative z-10 flex items-center gap-3">
-                <span>ENTENDA O JOGO POR</span>
-                <span className="bg-black/20 px-2 py-1 rounded text-[#ffdf00]">R$17,90</span>
+                <span>ENTENDA O JOGO</span>
               </span>
             </Button>
           </div>
@@ -341,8 +345,7 @@ export default function Home() {
               className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-xl px-12 py-8 h-auto rounded-xl shadow-[0_0_20px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
             >
               <span className="relative z-10 flex items-center gap-3">
-                <span>VIRE O JOGO POR</span>
-                <span className="bg-black/20 px-2 py-1 rounded text-[#ffdf00]">R$17,90</span>
+                <span>VIRE O JOGO</span>
               </span>
             </Button>
           </div>
@@ -556,8 +559,7 @@ export default function Home() {
             className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-xl px-12 py-8 h-auto rounded-xl shadow-[0_0_20px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
           >
             <span className="relative z-10 flex items-center gap-3">
-              <span>ACESSAR AGORA POR</span>
-              <span className="bg-black/20 px-2 py-1 rounded text-[#ffdf00]">R$17,90</span>
+              <span>ACESSAR AGORA</span>
             </span>
           </Button>
         </div>
@@ -740,8 +742,7 @@ export default function Home() {
                     className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] hover:shadow-[0_0_50px_rgba(0,196,59,0.6)] transition-all hover:scale-105"
                   >
                     <span className="relative z-10 flex items-center gap-3">
-                      <span>ACESSAR AGORA POR</span>
-                      <span className="text-3xl">R$17,90</span>
+                      <span>ACESSAR AGORA</span>
                     </span>
                   </Button>
                 </div>
@@ -790,7 +791,7 @@ export default function Home() {
             onClick={scrollToOffer}
             className="bg-[#00c24a] hover:bg-[#009c3b] text-white font-black text-lg md:text-2xl px-12 md:px-20 py-10 h-auto rounded-xl shadow-[0_0_30px_rgba(0,196,59,0.4)] transition-all hover:scale-105"
           >
-            SAIA DA BOLHA POR R$17,90
+            SAIA DA BOLHA
           </Button>
         </div>
       </section>
