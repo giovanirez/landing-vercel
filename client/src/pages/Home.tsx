@@ -715,7 +715,7 @@ export default function Home() {
                     <p className="text-white/80 text-lg md:text-xl mb-2">Por apenas</p>
                     <div className="flex items-center justify-center gap-1">
                       <span className="text-2xl text-[#00c24a]">R$</span>
-                      <p className="text-white font-black text-7xl md:text-8xl leading-none text-gradient-brasil">17,90</p>
+                      <p className="text-white font-black text-7xl md:text-8xl leading-none text-gradient-brasil">14,90</p>
                     </div>
                     <p className="text-white/50 text-sm md:text-base mt-4 font-medium">Pagamento único. Acesso vitalício.</p>
                   </div>
@@ -782,7 +782,7 @@ export default function Home() {
               <p className="text-xl md:text-2xl text-white/90 leading-relaxed">
                 Se você é de direita<br />
                 e não quer ser pego de surpresa novamente,<br />
-                <span className="text-white font-bold text-2xl md:text-3xl">o acesso está liberado agora por apenas R$17,90.</span>
+                <span className="text-white font-bold text-2xl md:text-3xl">o acesso está liberado agora por apenas R$14,90.</span>
               </p>
             </div>
           </div>
